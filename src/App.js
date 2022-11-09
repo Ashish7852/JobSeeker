@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import './Main.css';
+import { Routes, Route } from 'react-router-dom';
+import Signin from './components/Signin';
+import { Container, Row, Col } from "react-bootstrap";
+import Signup from './components/Signup';
+import {UserAuthContextProvider} from './context/UserAuthContext';
+
+import ProtectedRoute from './components/ProtectedRoute';
+
+import PhoneSignUp from './components/PhoneSignUp';
+
+import About from './components/About';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Container>
+        <Row>
+          <Col>
+          <UserAuthContextProvider>
+          <Routes>
+          <Route path="/about" 
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }  />
+            <Route path="/" element={<Signin />}  />
+            <Route path="/phonesignup" element={<PhoneSignUp/>}  />
+            <Route path="/signUp" element={<Signup/>}  />
+          </Routes>
+          </UserAuthContextProvider>
+          </Col>
+        </Row>
+     </Container>   
   );
 }
 

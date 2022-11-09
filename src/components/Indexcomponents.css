@@ -1,0 +1,47 @@
+
+.container-fluid{
+    background-image:url("unemployed.jpg") ;
+    
+    background-color: rgb(241, 175, 175);
+    height: 400px;
+    width: 1200px;
+    text-size-adjust:fit-content ;
+    color: rgb(241, 241, 242);
+    }
+
+section {
+    height: 500px;
+
+}
+.col {
+    padding: 10px;
+    margin: 5px;
+}
+
+.container-flex {
+    height: fit-content;
+    width: fit-content;
+    display: -ms-flexbox;
+}
+body {
+    margin: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  .h1, .h2, .h3
+  {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+  }
+  
+ 
